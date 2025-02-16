@@ -8,9 +8,5 @@
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
-  "type": "module",
-  "dependencies": {
-    "@elysiajs/websocket": "^0.2.8",
-    "elysia": "^1.2.13"
-  }
+  "type": "module"
 }
