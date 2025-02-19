@@ -1,6 +1,5 @@
 import type { Server, ServerWebSocket } from "bun";
 
-// index.ts
 const clients: Set<ServerWebSocket<unknown>> = new Set();
 
 const server: Server = Bun.serve({
@@ -28,7 +27,6 @@ const server: Server = Bun.serve({
       console.log("Client connected");
     },
     message(ws, message) {
-      // Broadcast to all other clients
       for (const client of clients) {
         if (client !== ws) {
           client.send(message);
